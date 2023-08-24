@@ -14,7 +14,10 @@ const keys = document.querySelectorAll(".key");
 keys.forEach((key) => {
   key.addEventListener("click", () => {
     const letter = key.textContent;
+    key.setAttribute("disabled", "true");
+    key.style.backgroundColor = "gray";
 
+console.log(key);
     let usrInput = letter.toLowerCase(); // Kullanıcının girdiği harfi küçük harfe dönüştür
 
     let correctIndexes = [];
@@ -76,7 +79,11 @@ tryAgainButtonLose.addEventListener("click", () => {
   newArr = currentWord.split("").map(() => "_");
   remainingLetters = currentWord.length;
   wrongAttempts = 0;
-
+ 
+  keys.forEach(key =>{
+    key.disabled=false;
+    key.style.backgroundColor = "#0D6EFD";
+  })
   document.querySelector(".rightContent").classList.remove("d-none");
   document.querySelector("#winOrLose").classList.add("d-none");
   // document.querySelector("#cardContentLost").textContent = "";
@@ -88,12 +95,17 @@ tryAgainButtonLose.addEventListener("click", () => {
 });
 const tryAgainButtonwin = document.querySelector("#tryAgainButtonWin");
 tryAgainButtonwin.addEventListener("click", () => {
+
   // Yeniden başlatmak için gerekli kodları burada çağırın
   currentWord = arr[Math.floor(Math.random() * arr.length)];
   newArr = currentWord.split("").map(() => "_");
   remainingLetters = currentWord.length;
   wrongAttempts = 0;
-
+  
+  keys.forEach(key =>{
+    key.disabled=false;
+    key.style.backgroundColor = "#0D6EFD";
+  })
   document.querySelector(".rightContent").classList.remove("d-none");
   document.querySelector("#winOrLose").classList.add("d-none");
   // document.querySelector("#cardContentWin").textContent = "";
