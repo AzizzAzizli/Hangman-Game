@@ -1,7 +1,13 @@
 let arr = ["javascript", "python", "java", "ruby", "go", "kotlin", "php"];
-let j = Math.round(Math.random() * arr.length-1);
+let j = Math.ceil(Math.random() * arr.length-1);
 let currentWord = arr[j];
-
+// console.log(j);
+// setInterval(function(){
+// let j = Math.ceil(Math.random() * arr.length-1);
+//   console.log(j)
+//   console.log(arr[j]);
+// },100);
+// console.log(currentWord);
 let newArr = currentWord.split("").map(() => "_");
 
 console.log(newArr);
