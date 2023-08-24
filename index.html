@@ -29,13 +29,44 @@
       </div>
 
       <div
-        class="rightContent d-flex justify-content-end w-50 gap-5 ms-5 flex-column"
+        id="winOrLose"
+        class="d-flex justify-content-end w-50 gap-5 ms-5 flex-column d-none"
       >
+        <div class="card w-50 bg-danger text-center" id="loserCard">
+          <div class="card-body">
+            <h5 class="card-title text-light" id="cardLost">
+              You lost the Game
+            </h5>
+            <p class="card-text text-light" id="cardContentLost"></p>
+            <a href="#" class="btn btn-primary" id="tryAgainButtonLose">Try again</a>
+          </div>
+        </div>
+
+        <div class="card w-50 bg-success text-center" id="winnerCard">
+          <div class="card-body">
+            <h5 class="card-title text-light" id="cardWin">You win the Game</h5>
+            <p class="card-text text-light" id="cardContentWin"></p>
+            <a href="#" class="btn btn-primary" id="tryAgainButtonWin">Try again</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="rightContent d-flex justify-content-end w-50 gap-5 ms-5 flex-column"
+        id
+      >
+      
+        <div class="w-100 text-center fs-4 fw-bold">
+          Guess in programming languages
+        </div>
+        <div id="wrongGuess" class="w-100 text-center fs-5 fw-bold">
+          Incorrect guess. 6 attempts left.
+        </div>
         <div
           style="letter-spacing: 6px"
           id="outPut"
           class="w-100 text-center fs-2 fw-bold"
         ></div>
+
         <div class="keyboard d-flex flex-column text-center">
           <div class="">
             <button class="key">Q</button>
