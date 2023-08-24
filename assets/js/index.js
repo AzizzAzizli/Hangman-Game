@@ -69,8 +69,8 @@ keys.forEach((key) => {
   });
 });
 
-const tryAgainButton = document.querySelector("#tryAgainButtonLose");
-tryAgainButton.addEventListener("click", () => {
+const tryAgainButtonLose = document.querySelector("#tryAgainButtonLose");
+tryAgainButtonLose.addEventListener("click", () => {
   // Yeniden başlatmak için gerekli kodları burada çağırın
   currentWord = arr[Math.floor(Math.random() * arr.length)];
   newArr = currentWord.split("").map(() => "_");
