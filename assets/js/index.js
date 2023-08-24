@@ -1,5 +1,5 @@
 let arr = ["javascript", "python", "java", "ruby", "go", "kotlin", "php"];
-let j = Math.round(Math.random() * arr.length);
+let j = Math.round(Math.random() * arr.length-1);
 let currentWord = arr[j];
 
 let newArr = currentWord.split("").map(() => "_");
