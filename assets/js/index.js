@@ -1,4 +1,5 @@
 let arr = ["javascript", "python", "java", "ruby", "go", "kotlin", "php"];
+let item=document.querySelectorAll(".item");
 let j = Math.ceil(Math.random() * arr.length-1);
 let currentWord = arr[j];
 // console.log(j);
@@ -42,6 +43,11 @@ console.log(key);
         }
       });
     } else {
+      item.forEach((el,idx,list)=>{
+  
+        list[wrongAttempts].style.display="block"
+        
+       })
       wrongAttempts++;
 
       console.log(`Incorrect guess. ${6 - wrongAttempts} attempts left.`);
@@ -85,7 +91,9 @@ tryAgainButtonLose.addEventListener("click", () => {
   newArr = currentWord.split("").map(() => "_");
   remainingLetters = currentWord.length;
   wrongAttempts = 0;
- 
+  item.forEach((el)=>{
+    el.style.display ="none";
+  })
   keys.forEach(key =>{
     key.disabled=false;
     key.style.backgroundColor = "#0D6EFD";
@@ -107,7 +115,9 @@ tryAgainButtonwin.addEventListener("click", () => {
   newArr = currentWord.split("").map(() => "_");
   remainingLetters = currentWord.length;
   wrongAttempts = 0;
-  
+  item.forEach((el)=>{
+    el.style.display ="none";
+  })
   keys.forEach(key =>{
     key.disabled=false;
     key.style.backgroundColor = "#0D6EFD";
