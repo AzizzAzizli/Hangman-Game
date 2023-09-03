@@ -25,7 +25,7 @@ keys.forEach((key) => {
     key.style.backgroundColor = "gray";
 
 console.log(key);
-    let usrInput = letter.toLowerCase(); // Kullanıcının girdiği harfi küçük harfe dönüştür
+    let usrInput = letter.toLowerCase(); 
 
     let correctIndexes = [];
 
@@ -86,7 +86,7 @@ console.log(key);
 
 const tryAgainButtonLose = document.querySelector("#tryAgainButtonLose");
 tryAgainButtonLose.addEventListener("click", () => {
-  // Yeniden başlatmak için gerekli kodları burada çağırın
+
   currentWord = arr[Math.floor(Math.random() * arr.length)];
   newArr = currentWord.split("").map(() => "_");
   remainingLetters = currentWord.length;
@@ -110,7 +110,7 @@ tryAgainButtonLose.addEventListener("click", () => {
 const tryAgainButtonwin = document.querySelector("#tryAgainButtonWin");
 tryAgainButtonwin.addEventListener("click", () => {
 
-  // Yeniden başlatmak için gerekli kodları burada çağırın
+
   currentWord = arr[Math.floor(Math.random() * arr.length)];
   newArr = currentWord.split("").map(() => "_");
   remainingLetters = currentWord.length;
