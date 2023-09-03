@@ -102,7 +102,7 @@ tryAgainButtonLose.addEventListener("click", () => {
   document.querySelector("#winOrLose").classList.add("d-none");
   // document.querySelector("#cardContentLost").textContent = "";
   document.querySelector("#wrongGuess").textContent =
-    "Incorrect guess. 6 attempts left.";
+    "You have 6 attempts";
   document.querySelector("#outPut").textContent = newArr.join(" ");
   document.querySelector("#winnerCard").classList.remove("d-none");
   document.querySelector("#loserCard").classList.remove("d-none");
@@ -126,7 +126,7 @@ tryAgainButtonwin.addEventListener("click", () => {
   document.querySelector("#winOrLose").classList.add("d-none");
   // document.querySelector("#cardContentWin").textContent = "";
   document.querySelector("#wrongGuess").textContent =
-    "Incorrect guess. 6 attempts left.";
+    "You have 6 attempts";
   document.querySelector("#outPut").textContent = newArr.join(" ");
   document.querySelector("#winnerCard").classList.remove("d-none");
   document.querySelector("#loserCard").classList.remove("d-none");
